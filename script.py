@@ -6,7 +6,10 @@ try:
   
   con = db.cursor()
   
-  cur.execute("")
+  cur.execute("CREATE TABLE IF NOT EXISTS patientRegistry (id INT PRYMARY KEY AUTO_INCREMENT, fisrtName varchar(30),lastname varchar(30), cc INT, priority varchar(15
+  
+except MySQLdb, e:
+  print "No se pudo realizar conexion con la base de datos"
 
 def add_person(firstName, lastName, cc, phone, priority, time_of_admission):
   print ""
