@@ -16,8 +16,8 @@ try:
     con.execute("SELECT * FROM patientRegistry")
     print ""
   
-  def delete_person():
-    con.execute()
+  def delete_person(name):
+    con.execute("DELETE FROM patientRegistry WHERE name = " + "'" + name + "'")
     con.commit()
     print ""
   
